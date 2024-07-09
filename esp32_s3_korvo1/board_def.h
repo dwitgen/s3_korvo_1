@@ -115,7 +115,7 @@ extern audio_hal_func_t AUDIO_CODEC_ES7210_DEFAULT_HANDLE;
  * @brief Button Function Definition
  */
 #define FUNC_BUTTON_EN              (1)
-#define INPUT_KEY_NUM               6
+#define INPUT_KEY_NUM               7
 #define BUTTON_VOLUP_ID             0
 #define BUTTON_VOLDOWN_ID           1
 #define BUTTON_SET_ID               2
@@ -131,11 +131,6 @@ extern audio_hal_func_t AUDIO_CODEC_ES7210_DEFAULT_HANDLE;
     },                                                  \
     {                                                   \
         .type = PERIPH_ID_ADC_BTN,                      \
-        .user_id = INPUT_KEY_USER_ID_MUTE,              \
-        .act_id = BUTTON_MODE_ID,                       \
-    },                                                  \
-    {                                                   \
-        .type = PERIPH_ID_ADC_BTN,                      \
         .user_id = INPUT_KEY_USER_ID_SET,               \
         .act_id = BUTTON_SET_ID,                        \
     },                                                  \
@@ -146,14 +141,20 @@ extern audio_hal_func_t AUDIO_CODEC_ES7210_DEFAULT_HANDLE;
     },                                                  \
     {                                                   \
         .type = PERIPH_ID_ADC_BTN,                      \
-        .user_id = INPUT_KEY_USER_ID_VOLUP,             \
-        .act_id = BUTTON_VOLUP_ID,                      \
+        .user_id = INPUT_KEY_USER_ID_MODE,              \
+        .act_id = BUTTON_MODE_ID,                       \
     },                                                  \
     {                                                   \
         .type = PERIPH_ID_ADC_BTN,                      \
         .user_id = INPUT_KEY_USER_ID_VOLDOWN,           \
         .act_id = BUTTON_VOLDOWN_ID,                    \
+    },                                                  \
+    {                                                   \
+        .type = PERIPH_ID_ADC_BTN,                      \
+        .user_id = INPUT_KEY_USER_ID_VOLUP,             \
+        .act_id = BUTTON_VOLUP_ID,                      \
     }                                                   \
 }
+
 
 #endif
